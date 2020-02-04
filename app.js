@@ -13,5 +13,6 @@ app.use( express.static('./assets'));
 //fire controllers
 todoController(app)
 //set up port
-app.listen(3000);
-console.log('now listening to port 3000');
+let port = process.env.PORT || 3000;
+app.listen(port);
+console.log(`now listening to port ${port}`);
